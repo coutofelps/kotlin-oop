@@ -11,7 +11,7 @@ fun salaryWithBigDecimal() {
     // A função map mapeia o array de salários originais para um novo array com os salários + bônus
     val bonus = "1.1".toBigDecimal()
     val salariesWithBonus: Array<BigDecimal> = salaries
-        .map { salarie -> relativeIncreaseCalc(salarie, bonus) }
+        .map { salary -> relativeIncreaseCalc(salary, bonus) }
         .toTypedArray()
 
     println(salariesWithBonus.contentToString())
@@ -39,13 +39,13 @@ fun salaryWithBigDecimal() {
     println(lessSalariesAverage)
 }
 
-private fun relativeIncreaseCalc(salarie: BigDecimal, bonus: BigDecimal): BigDecimal {
-    return if(salarie < "5000".toBigDecimal()) {
-        salarie + "500".toBigDecimal()
+private fun relativeIncreaseCalc(salary: BigDecimal, bonus: BigDecimal): BigDecimal {
+    return if(salary < "5000".toBigDecimal()) {
+        salary + "500".toBigDecimal()
     }
 
     else {
-        (salarie * bonus).setScale(2, RoundingMode.UP)
+        (salary * bonus).setScale(2, RoundingMode.UP)
     }
 }
 

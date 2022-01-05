@@ -43,7 +43,7 @@ fun bookList() {
     // books.show()
 
     // Removendo um livro
-    books.remove(bookOne)
+    // books.remove(bookOne)
     // books.show()
 
     // Ordenando a lista de livros com a função sorted
@@ -73,9 +73,9 @@ fun bookList() {
 // Criando uma extension function que percorre a lista, concatena todos os títulos e autores formatados em uma única variável e depois a exibe
 fun List<Book?>.show() {
     val formattedText = this
-        .filterNotNull() // Esta função impede que se uma propriedade que não pode ser nula está nula, ignoraremos o item da lista
+        .filterNotNull() // Esta função impede que se uma propriedade que não pode ser nula está nula, então ignoraremos o item da lista
         .joinToString(separator = "\n") {
-        " - ${it.title} de ${it.author} - Publicado em ${it?.pubYear}" // Ao utilizar it?.title, estamos fazendo uma safecall para chamar parâmetros quando não forem nulos
+        " - ${it.title} de ${it.author} - Publicado em ${it.pubYear}" // Ao utilizar it?.title, estamos fazendo uma safecall para chamar parâmetros quando não forem nulos
     }
 
     println("\n ### Lista de Livros ### \n")
