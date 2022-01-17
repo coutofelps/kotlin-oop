@@ -1,4 +1,4 @@
-## Projeto React OOP
+## Projeto Kotlin OOP
 
 Repositório criado para ser utilizado pelo projeto de Kotlin OOP desenvolvido em Kotlin nas aulas feitas através da plataforma Alura.
 
